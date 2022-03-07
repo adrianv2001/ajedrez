@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="ajedrez.list">
+      <field name="name">ajedrez list</field>
+      <field name="model">ajedrez.ajedrez</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="telefono"/>
+          <field name="nif"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ajedrez.action_window">
+      <field name="name">ajedrez window</field>
+      <field name="res_model">ajedrez.ajedrez</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ajedrez.action_server">
+      <field name="name">ajedrez server</field>
+      <field name="model_id" ref="model_ajedrez_ajedrez"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ajedrez" id="ajedrez.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ajedrez.menu_1" parent="ajedrez.menu_root"/>
+    <menuitem name="Menu 2" id="ajedrez.menu_2" parent="ajedrez.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ajedrez.menu_1_list" parent="ajedrez.menu_1"
+              action="ajedrez.action_window"/>
+    <menuitem name="Server to list" id="ajedrez" parent="ajedrez.menu_2"
+              action="ajedrez.action_server"/>
+-->
+  </data>
+</odoo>
