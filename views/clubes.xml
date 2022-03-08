@@ -1,17 +1,31 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <record model="ir.actions.act_window" id="clubes_list_action">
+            <field name="name">Clubes de Ajedrez</field>
+            <!-- O que se visualiza na parte superior esquerda -->
+            <field name="res_model">ajedrez.clubes</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Crea un registro</p>
+            </field>
+        </record>
 
-    <record model="ir.ui.view" id="ajedrez.list">
-      <field name="name">ajedrez.list</field>
-      <field name="model">ajedrez.clubes</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="telefono"/>
-          <field name="nif"/>
-        </tree>
-      </field>
-    </record>
-  </data>
+        <record model="ir.ui.view" id="clubes_tree_view">
+            <field name="name">clubes.tree</field>
+            <field name="model">ajedrez.clubes</field>
+            <field name="arch" type="xml">
+                <tree string="Clubes Tree" editable ="top" >
+                    <field name="name"/>
+                    <field name="telefono"/>
+                    <field name="nif"/>
+                    <field name="codigoRegistro"/>
+                    <field name="local"/>
+                    <field name="localidad"/>
+                    <field name="provincia"/>
+                    <field name="codigoPostal"/>
+                    <field name="pais"/>
+                </tree>
+            </field>
+        </record>
+    </data>
 </odoo>

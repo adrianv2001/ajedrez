@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ajedrez_ajedrez,ajedrez.ajedrez,model_ajedrez_ajedrez,base.group_user,1,1,1,1
+access_ajedrez_ajedrez,ajedrez.ajedrez,model_ajedrez_clubes,base.group_user,1,1,1,1
+access_ajedrez_jugadores,ajedrez.jugadores,model_ajedrez_jugadores,base.group_user,1,1,1,1

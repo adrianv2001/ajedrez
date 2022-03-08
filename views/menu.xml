@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem id="main_ajedrez" name="Ajedrez"/>
+        <menuitem id="menu_clubes" name="Clubes" parent="main_ajedrez" action="clubes_list_action"/>
+        <menuitem id="menu_jugadores" name="Jugadores" parent="main_ajedrez" action="jugadores_list_action"/>-->
+    </data>
+</odoo>
